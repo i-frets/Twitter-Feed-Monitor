@@ -1,22 +1,18 @@
 function scrap(widget_id){
 	let url = $("#webhooklink").prop("value");
-	if (url !== null || url !== undefined || url !== ''){
+	if (url == ''){
 		alert("Webhook link is empty!");
+		return;
 	}
-	else{
 	for (let i = 0; i <= widget_id; i++){
 		tweets = $("#twitter-widget-"+ i).contents().find("div[data-tweet-id]");
-		if (localStorage.getItem("webhookURL")){
+		if (localStorage.getItem("webhookTwitterURL")){
 			console.log("Webhook has been found in localStorage");
-			$("#webhooklink").prop("value", localStorage.getItem("webhookURL"))
+			$("#webhooklink").prop("value", localStorage.getItem("webhookTwitterURL"))
 		}
 
 		let url = $("#webhooklink").prop("value");
-		if (url !== null || url !== undefined || url !== ''){
-			alert("Webhook link is empty!");
-		}
-		else{
-		localStorage.setItem("webhookURL", url);
+		localStorage.setItem("webhookTwitterURL", url);
 		console.log("Webhook found in local storage");
 		// for (let i = tweets.length; i >= 0; i--){
 		//	let id = tweets.eq(i).attr("data-tweet-id")
@@ -27,13 +23,6 @@ function scrap(widget_id){
 
 		// }
 	}
-<<<<<<< HEAD
-	}
-	}
-=======
-	alert("Tweets were successfully sent!");
-
->>>>>>> ced933c9e56616bbe2aa0e2d29ac5b53c038e21c
 }
 window.onload = function(){
 
