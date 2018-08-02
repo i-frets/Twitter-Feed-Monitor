@@ -27,8 +27,13 @@ function scrap(widget_id){
 
 		// }
 	}
+<<<<<<< HEAD
 	}
 	}
+=======
+	alert("Tweets were successfully sent!");
+
+>>>>>>> ced933c9e56616bbe2aa0e2d29ac5b53c038e21c
 }
 window.onload = function(){
 
