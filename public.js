@@ -18,7 +18,7 @@ function scrap(widget_id){
 		
 		// }
 	}
-
+	alert("Tweets were successfully sent!");
 
 }
 
